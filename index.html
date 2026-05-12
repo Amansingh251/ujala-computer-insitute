@@ -1,0 +1,2359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- social media icon  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ujala Computer Center</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body {font-family:'Poppins',sans-serif;}
+
+
+
+/* FORM DESIGN */
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.form-row input {
+  width: 100%;
+}
+
+@media(max-width:600px){
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* NAVBAR */
+nav {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  background:#111;
+}
+nav h2 {color:white;}
+nav a {
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
+}
+nav a:hover {color:#00c6ff;}
+
+/* HERO */
+.hero {
+  height:70vh;
+/*background:url('https://source.unsplash.com/1600x900/?computer'); */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  /*background: linear-gradient(90deg, #ff512f, #00c6ff, #00ff88, #ffcc00);*/
+  text-align:center;
+  /*-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+}
+
+
+
+
+.hero h1 {font-size:50px;}
+.hero p {margin:10px 0;}
+.hero button {
+  padding:10px 25px;
+  background:#00c6ff;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+
+.hero button:hover {background:#0072ff;}
+
+/* SECTION */
+section {padding:60px 20px;text-align:center;}
+/* About cards ke liye alag design */
+
+
+
+
+
+
+
+/* CARDS */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards fix */
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+.card {
+  width:100%;
+  margin:15px;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card p {
+  padding:0 10px;
+  font-size:14px;
+  color:#555;
+}
+
+.card {
+  background:#e6f7ff;
+  position:relative;
+}
+
+.card.course::before {
+  content:"POPULAR";
+  position:absolute;
+  top:10px;
+  left:-30px;
+  background:red;
+  color:white;
+  padding:5px 30px;
+  transform:rotate(-45deg);
+  font-size:12px;
+}
+
+
+.card:hover {
+  transform:translateY(-20px);
+}
+.card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+.card h3 {padding:15px;}
+/* Premium Look (Glass Effect Card) */
+
+
+.card {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.2);
+  border:1px solid rgba(255,255,255,0.3);
+}
+
+
+/* GALLERY */
+.gallery img {
+  width:220px;
+  margin:10px;
+  border-radius:10px;
+  transition:0.3s;
+}
+.gallery img:hover {transform:scale(1.1);}
+
+/* CONTACT */
+input, textarea {
+  width:90%;
+  max-width:400px;
+  padding:12px;
+  margin:10px;
+  border:1px solid #ccc;
+}
+button {
+  padding:10px 20px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+ 
+
+
+  
+/* FOOTER */
+footer {
+  background:#111;
+  color:white;
+  padding:20px;
+}
+
+/* WHATSAPP */
+.whatsapp {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+}
+
+/* SEARCH BAR */
+.search-box {
+  margin:20px;
+}
+.search-box input {
+  padding:10px;
+  width:250px;
+}
+/* SOCIAL MEDIA ICON */
+.social-icons {
+  margin-top:10px;
+}
+
+.social-icons a {
+  color:white;
+  margin:0 10px;
+  font-size:20px;
+  transition:0.3s;
+}
+
+.social-icons a:hover {
+  color:#00c6ff;
+}
+/* ABOUT  */
+#about p {
+  margin:20px auto;
+  font-size:16px;
+  line-height:1.6;
+  
+}
+
+#about .card {
+  padding:20px;
+}
+
+
+/* HEADER */
+header {
+  position:sticky;
+  top:0;
+  z-index:1000;
+  backdrop-filter:blur(10px);
+}
+
+/* NAVBAR */
+.navbar {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF,#515BD4);
+  color:white;
+}
+
+/* LOGO */
+.logo {
+  font-size:22px;
+  font-weight:bold;
+}
+.logo span {
+  display:block;
+  font-size:14px;
+  color:#13f417f4;
+}
+
+/* MENU */
+.menu {
+  display:flex;
+  list-style:none;
+}
+.menu li {
+  margin:0 10px;
+}
+.menu a {
+  color:white;
+  text-decoration:none;
+  transition:0.3s;
+}
+.menu a:hover {
+  color:#00c6ff;
+}
+
+/* RIGHT SIDE */
+.right-section {
+  display:flex;
+  align-items:center;
+}
+
+/* SEARCH */
+.nav-search {
+  padding:6px;
+  border-radius:5px;
+  border:none;
+  margin-right:10px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  padding:6px 12px;
+  background:#00c6ff;
+  border:none;
+  color:white;
+  cursor:pointer;
+}
+.login-btn:hover {
+  background:#0072ff;
+}
+
+/* MOBILE */
+.menu-toggle {
+  display:none;
+  font-size:25px;
+  cursor:pointer;
+}
+
+@media(max-width:768px) {
+
+  .menu {
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    right:0;
+    background:#111;
+    width:200px;
+  }
+
+  .menu.show {
+    display:flex;
+  }
+
+  .right-section {
+    display:none;
+  }
+
+  .menu-toggle {
+    display:block;
+  }
+}
+/* mooth toogle */
+
+.menu-toggle {
+  font-size:28px;
+  transition:0.3s;
+}
+
+.menu-toggle:hover {
+  transform:rotate(90deg);
+}
+
+
+
+@media(max-width:768px) {
+
+  .menu {
+    position:absolute;
+    top:60px;
+    right:-100%;   /* hidden by default */
+    background:#111;
+    width:200px;
+    flex-direction:column;
+    transition:0.4s ease;
+  }
+
+  .menu.show {
+    right:0;   /* slide in */
+  }
+
+  .menu li {
+    padding:15px;
+    border-bottom:1px solid #333;
+  }
+
+  .right-section {
+    display:none;
+  }
+
+  .menu-toggle {
+    display:block;
+  }
+}
+
+
+
+#registration {
+  padding:60px 20px;
+  background:#f9f9f9;
+}
+
+#registration form {
+  max-width:400px;
+  margin:auto;
+}
+
+#registration input, 
+#registration select {
+  width:100%;
+  padding:6px;
+  margin:7px 0;
+  border:1px solid #ccc;
+  border-radius:5px;
+}
+/* Mobile responsive (important)*/
+@media(max-width:1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width:600px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* vedio k liye */
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(134, 183, 146, 0.5);
+  z-index: 1;
+}
+
+/* DEVELOPER SECTION */
+#developer {
+  padding:60px 20px;
+  background:#f4f4f4;
+  text-align:center;
+}
+/*Developer cards left-right slide honge
+Mobile me swipe bhi kar paoge
+Professional scrolling effect ayega*/
+.dev-container {
+  display:flex;
+  gap:20px;
+  overflow-x:auto;
+  scroll-behavior:smooth;  
+  padding:20px;
+}
+
+.dev-container::-webkit-scrollbar {
+  height:8px;
+}
+
+.dev-container::-webkit-scrollbar-thumb {
+  background:#00c6ff;
+  border-radius:10px;
+}
+
+ 
+
+.dev-card:hover {
+  transform:translateY(-10px);
+}
+
+.dev-card img {
+  width:120px;
+  height:120px;
+  border-radius:50%;   /* 👈 ये image ko gol banata hai */
+  object-fit:cover;
+  margin-top:15px;
+  border:4px solid #00c6ff;
+}
+
+.dev-card h3 {
+  margin:10px 0;
+}
+
+.dev-card p {
+  color:#777;
+}
+
+.dev-social {
+  margin:10px 0;
+}
+
+.dev-social a {
+  color:#333;
+  margin:0 8px;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.dev-social a:hover {
+  color:#00c6ff;
+}
+
+/*IMG ME ZOOM EFFECT*/
+.dev-card img:hover {
+  transform:scale(1.1);
+  transition:0.3s;
+}
+
+
+.gallery-box {
+  display: flex;
+  gap: 10px;
+}
+
+.gallery-box img {
+  width: 30%;
+  border-radius: 10px;
+}
+
+/* Video Section */
+.video-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.video-box video {
+  width: 60%;        /* optional */
+  height: 400px;     /* 👈 height kam kar di */
+  object-fit: cover; /* important */
+  border-radius: 12px;
+}
+
+/* Mobile fix bhi */
+@media(max-width:600px){
+  .video-box video {
+    width: 90%;
+    height: 200px;
+  }
+}
+
+
+/* Gender option  */
+
+.gender-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/*PRICE */
+.price {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: red;
+  margin-right: 10px;
+}
+
+.new-price {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* STUDENT REVIEW */
+#reviews {
+  padding:60px 20px;
+  background:#f5f5f5;
+  text-align:center;
+}
+
+#reviews .card {
+  padding:20px;
+}
+
+#reviews img {
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-top:15px;
+  border:3px solid #00c6ff;
+}
+
+#reviews h3 {
+  margin-top:10px;
+}
+
+#reviews p {
+  font-size:14px;
+  color:#555;
+}
+
+
+
+/* ===== PREMIUM DEVELOPER SLIDER ===== */
+
+.slider-wrapper{
+  position:relative;
+  width:100%;
+  overflow:hidden;
+  perspective:1000px;
+}
+
+.dev-container{
+  display:flex;
+  justify-content:center;   /* center */
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+  padding:30px;
+}
+
+/* CARD */
+.dev-card{
+  min-width:250px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
+color:white;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  transition:0.5s;
+  transform:scale(0.9);
+  opacity:0.7;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+  flex-shrink:0;
+}
+
+/* CENTER ACTIVE CARD */
+.dev-card.active{
+  transform:scale(1.05) rotateY(0deg);
+  opacity:1;
+}
+
+/* IMAGE */
+.dev-card img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #00c6ff;
+}
+
+/* BUTTONS */
+.slide-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:50px;
+  height:50px;
+  border:none;
+  border-radius:50%;
+  background:#00c6ff;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+  z-index:10;
+}
+
+.left-btn{
+  left:10px;
+}
+
+.right-btn{
+  right:10px;
+}
+
+/* DOTS */
+.dots{
+  margin-top:20px;
+  text-align:center;
+}
+
+.dot{
+  display:inline-block;
+  width:12px;
+  height:12px;
+  background:#ccc;
+  border-radius:50%;
+  margin:0 5px;
+  transition:0.3s;
+}
+
+.active-dot{
+  background:#00c6ff;
+  transform:scale(1.3);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .dev-card{
+    min-width:240px;
+  }
+
+  .slide-btn{
+    width:40px;
+    height:40px;
+  }
+}
+
+/* ===== PREMIUM LOGIN ===== */
+
+.premium-login{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(8px);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+/* MAIN BOX */
+.premium-box{
+  width:900px;
+  max-width:95%;
+  display:flex;
+  overflow:hidden;
+  border-radius:25px;
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(20px);
+  box-shadow:0 15px 40px rgba(0,0,0,0.4);
+  animation:zoomIn 0.4s ease;
+  position: relative;
+}
+
+
+.premium-close{
+  position:absolute;
+  top:15px;
+  right:15px;
+  width:40px;
+  height:40px;
+  background:white;
+  color:black;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:29px;
+  cursor:pointer;
+  z-index:9999;
+  box-shadow:0 4px 10px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+.premium-close:hover{
+  transform:rotate(90deg) scale(1.1);
+  background:white;
+  color:rgb(248, 246, 246);
+}
+
+
+/* ANIMATION */
+@keyframes zoomIn{
+
+  from{
+    transform:scale(0.7);
+    opacity:0;
+  }
+
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+
+}
+
+/* LEFT */
+.login-left{
+  width:50%;
+  padding:50px;
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+  color:white;
+  text-align:center;
+}
+
+.login-left h1{
+  font-size:40px;
+  margin-bottom:15px;
+}
+
+.login-left p{
+  font-size:15px;
+  line-height:1.6;
+}
+
+.login-left img{
+  width:260px;
+  margin-top:30px;
+}
+
+/* RIGHT */
+.login-right{
+  width:50%;
+  padding:50px;
+  background:white;
+}
+
+.login-right h2{
+  text-align:center;
+  margin-bottom:30px;
+  font-size:32px;
+  color:#333;
+}
+
+/* INPUT */
+.premium-input{
+  position:relative;
+  margin-bottom:20px;
+}
+
+.premium-input input{
+  width:100%;
+  padding:14px 45px;
+  border:none;
+  border-radius:12px;
+  background:#f1f1f1;
+  font-size:15px;
+  outline:none;
+}
+
+.premium-input i{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  color:#777;
+}
+
+.premium-input .fa-user,
+.premium-input .fa-envelope,
+.premium-input .fa-lock{
+  left:15px;
+}
+
+.eye-btn{
+  right:15px;
+  cursor:pointer;
+}
+
+/* REMEMBER */
+.remember-box{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.remember-box a{
+  text-decoration:none;
+  color:#0072ff;
+}
+
+/* BUTTON */
+.premium-login-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.premium-login-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* SOCIAL */
+.social-login{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  margin-top:25px;
+}
+
+.social-login button{
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  border:none;
+  cursor:pointer;
+  font-size:18px;
+  transition:0.3s;
+}
+
+.social-login button:hover{
+  transform:scale(1.1);
+}
+
+/* REGISTER */
+.register-text{
+  text-align:center;
+  margin-top:20px;
+  font-size:14px;
+}
+
+.register-text a{
+  color:#0072ff;
+  text-decoration:none;
+}
+
+/* CLOSE */
+.premium-close{
+  position:absolute;
+  top:15px;
+  right:20px;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+  z-index:10;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .premium-box{
+    flex-direction:column;
+  }
+
+  .login-left,
+  .login-right{
+    width:100%;
+  }
+
+  .login-left{
+    padding:30px;
+  }
+
+  .login-left img{
+    width:180px;
+  }
+
+  .login-right{
+    padding:30px;
+  }
+
+}
+
+
+/*close*/
+
+.premium-close{
+  position:absolute;
+  top:15px;
+  right:20px;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+  z-index:1000;
+  transition:0.3s;
+}
+
+.premium-close:hover{
+  transform:rotate(90deg);
+  color:#ff4d4d;
+}
+
+
+
+/* PREMIUM ABOUT CARD */
+
+.premium-about-card{
+  padding:30px;
+  border-radius:25px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.4s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.premium-about-card:hover{
+  transform:translateY(-12px) scale(1.03);
+  background:rgba(255,255,255,0.12);
+}
+
+.about-icon{
+  width:80px;
+  height:80px;
+  margin:auto;
+  margin-bottom:20px;
+  border-radius:50%;
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:35px;
+  box-shadow:0 5px 20px rgba(0,198,255,0.5);
+}
+
+.premium-about-card h3{
+  margin-bottom:15px;
+  font-size:24px;
+}
+
+.premium-about-card p{
+  color:#dbeafe;
+  line-height:1.7;
+}
+
+
+
+/* ===== PREMIUM COURSE CARD ===== */
+
+#courses{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+}
+
+#courses h1{
+  font-size:42px;
+  margin-bottom:40px;
+}
+
+/* CARD */
+#courses .card{
+  position:relative;
+  overflow:hidden;
+  border-radius:25px;
+  padding-bottom:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.5s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* TOP GLOW */
+#courses .card::before{
+  content:"";
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(
+    45deg,
+    transparent,
+    rgba(255,255,255,0.1),
+    transparent
+  );
+  transform:rotate(25deg);
+  transition:0.8s;
+}
+
+#courses .card:hover::before{
+  left:100%;
+}
+
+/* HOVER */
+#courses .card:hover{
+  transform:translateY(-15px) scale(1.03);
+  box-shadow:0 20px 40px rgba(0,198,255,0.3);
+}
+
+/* IMAGE */
+#courses .card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px 20px 0 0;
+  transition:0.5s;
+}
+
+#courses .card:hover img{
+  transform:scale(1.08);
+}
+
+/* TITLE */
+#courses .card h3{
+  font-size:24px;
+  margin-top:15px;
+  color:white;
+}
+
+/* TEXT */
+#courses .card p{
+  color:#cbd5e1;
+  line-height:1.6;
+  padding:0 15px;
+}
+
+/* PRICE */
+.price{
+  margin:15px 0;
+}
+
+.old-price{
+  text-decoration:line-through;
+  color:#ff6b6b;
+  margin-right:10px;
+}
+
+.new-price{
+  color:#00ff88;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.discount{
+  background:#ff004c;
+  color:white;
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+  margin-left:8px;
+}
+
+/* BUTTONS */
+#courses .card button{
+  width:85%;
+  margin:8px auto;
+  display:block;
+  padding:12px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  color:white;
+  font-size:15px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.4s;
+}
+
+#courses .card button:hover{
+  transform:scale(1.05);
+  background:linear-gradient(45deg,#0072ff,#00c6ff);
+}
+
+/* BADGE */
+.badge{
+  position:absolute;
+  top:15px;
+  left:15px;
+  background:linear-gradient(45deg,#ff512f,#ff004c);
+  color:white;
+  padding:6px 14px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:bold;
+  z-index:10;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+
+
+<header>
+  <nav class="navbar">
+
+    <div class="logo">
+      Ujala Computer institute
+      <span>Learn & Grow</span>
+    </div>
+
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+       <li><a href="privacy.html">Privacy</a></li>
+      <li><a href="#developer">Devloper</a></li>
+    </ul>
+
+    <div class="right-section">
+      
+    <button class="login-btn" onclick="login()">Login</button>
+    </div>
+
+    <div class="menu-toggle" 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    onclick="toggleMenu()">☰</div>
+
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+
+  <!-- 🎥 Video -->
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="video/nature.mp4" type="video/mp4">
+  </video>
+
+  <!-- TEXT -->
+  <div class="hero-content">
+    <h1>Welcome to UJALA Computer Center</h1>
+    <p>Learn Computer Skills & Build Your Future</p>
+  </div>
+
+</div>
+<!-- about page   -->
+<!-- PREMIUM ABOUT SECTION -->
+<section id="about" style="
+padding:80px 20px;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+text-align:center;
+color:white;
+">
+
+<h1 style="
+font-size:42px;
+margin-bottom:15px;
+">
+✨ About Our Institute
+</h1>
+
+<p style="
+max-width:850px;
+margin:auto;
+line-height:1.8;
+color:#cbd5e1;
+margin-bottom:50px;
+">
+
+AMAN Computer Center एक trusted computer institute है जहाँ students को 
+    basic से लेकर advance level तक computer education दी जाती है। 
+    हमारा उद्देश्य है कि हर student को practical knowledge और job-ready skills मिले।
+</p>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+">
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">🎓</div>
+  <h3>Quality Education</h3>
+  <p>
+    Industry level practical training aur updated syllabus.
+  </p>
+</div>
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">💼</div>
+  <h3>Job Oriented Courses</h3>
+  <p>
+    हमारे courses ऐसे designed हैं जो सीधे job और business में काम आएं। Career aur freelancing ke liye special professional courses.
+  </p>
+</div>
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">👨‍🏫</div>
+  <h3>Expert Trainers</h3>
+  <p>
+    
+Experienced trainers द्वारा practical training दी जाती है।
+  </p>
+</div>
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">🚀</div>
+  <h3>Modern Technology</h3>
+  <p>
+    Latest software tools aur modern learning environment.
+  </p>
+</div>
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">📜</div>
+  <h3>Certification</h3>
+  <p>
+    Course complete करने के बाद students को valid certificate दिया जाता है जो job और career growth में मदद करता है।
+  </p>
+</div>
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">🎓</div>
+<h3>🎓 Our Mission</h3>
+  <p>
+    Students को affordable और quality education देना ताकि वो अपने career में आगे बढ़ सकें।
+
+  </p>
+</div>
+
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">🌍</div>
+  <h3>📈Career Support</h3>
+  <p>
+     हम students को job guidance और career support भी provide करते हैं।
+  </p>
+</div>
+
+<!-- CARD -->
+<div class="premium-about-card">
+  <div class="about-icon">📚</div>
+      <h3>📚 Our Courses</h3>
+    <p>हम Basic से लेकर Advance तक सभी computer courses provide करते हैं जो career growth में मदद करते हैं।</p>
+</div>
+
+
+
+</div>
+
+</section><!-- SEARCH -->
+<div class="search-box" align="center">
+  <input type="text" id="searchInput" placeholder="Search Courses..." onkeyup="searchCourse()">
+</div>
+
+<!-- COURSES -->
+<section id="courses">
+  <h1>Our Courses</h1>
+  <div class="container">
+    <div class="card course">
+      <span class="badge">PAID</span>
+      <img src="img\basic computer.jpg">
+      <h3>Basic Computer</h3>
+      <p>Learn MS Word, Excel, Internet</p>
+      <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+      <button onclick="payRazor()">Enroll Now</button>
+       <button onclick="accessCourse('Web Development')">Start Course</button>
+    </div>
+
+    <div class="card course">
+      <span class="badge">PAID</span>
+      <img src="img\Tally.jpg">
+      <h3>Tally</h3>
+      <p>Learn Tally Erp- 9 </p>
+       <p class="price">
+      <span class="old-price">₹7000</span>
+      <span class="new-price">₹5999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+      <button onclick="openCourse('Tally')">Enroll Now</button>
+       <button onclick="accessCourse('Web Development')">Start Course</button>
+    </div>
+
+    <div class="card course">
+      <span class="badge">PAID</span>
+      <img src="img\web.jpg">
+      <h3>Web Development</h3>
+      <p>Learn HTML, CSS, Javascript   </p>
+       <p class="price">
+      <span class="old-price">₹7000</span>
+      <span class="new-price">₹6999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+      <button onclick="openCourse('Web Development')">Enroll Now</button>
+       <button onclick="accessCourse('Web Development')">Start Course</button>
+    </div>
+
+     <div class="card course">
+      <span class="badge">PAID</span>
+      <img src="img/tecnology.jpg">
+      <h3>Digital Marketing</h3>
+      <p>Learn Digital Marketing</p>
+       <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+      <button onclick="openCourse('Digital Marketing')">Enroll Now</button>
+       <button onclick="accessCourse('Web Development')">Start Course</button>
+    </div>
+
+  <div class="card course">
+    <span class="badge">PAID</span>
+      <img src="img/python.jpg">
+      <h3>Python Basic</h3>
+      <p>Learn Python Basic </p>
+         <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+      <button onclick="openCourse('Python Basic ')">Enroll Now</button>
+       <button onclick="accessCourse('Web Development')">Start Course</button>
+    </div>
+
+      <div class="card course">
+         <span class="badge">PAID</span>
+        <img src="img/php.jpg">
+        <h3>PHP Development</h3>
+        <p>Learn dynamic website development using PHP & MySQL.</p>
+           <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+      <button onclick="openCourse('PHP')">Enroll Now</button>
+      <button onclick="accessCourse('PHP')">Start Course</button>
+      </div>
+
+<div class="card course">
+   <span class="badge">PAID</span>
+  <img src="img/cloud.jpg">
+  <h3>Cloud Computing</h3>
+  <p>Learn AWS, cloud storage, hosting & deployment.</p>
+     <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('Cloud Computing')">Enroll Now</button>
+  <button onclick="accessCourse('Cloud')">Start Course</button>
+</div>
+<div class="card course">
+   <span class="badge">PAID</span>
+   <img src="img/django.jpg">
+   <h3>Django (Python)</h3>
+   <p>Build powerful web apps using Django framework.</p>
+      <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+   <button onclick="openCourse('Django')">Enroll Now</button>
+   <button onclick="accessCourse('Django')">Start Course</button>
+</div>
+
+<div class="card course">
+   <span class="badge">PAID</span>
+  <img src="img/react.jpg">
+  <h3>React JS</h3>
+  <p>Learn modern frontend development with React.</p>
+     <p class="price">
+      <span class="old-price">₹10,000</span>
+      <span class="new-price">₹6999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('React')">Enroll Now</button>
+  <button onclick="accessCourse('React')">Start Course</button>
+</div>
+
+
+<div class="card course">
+   <span class="badge">PAID</span>
+  <img src="img/ethical.jpg">
+  <h3>Ethical Hacking</h3>
+  <p>Learn cyber security, penetration testing & network security basics.</p>
+     <p class="price">
+      <span class="old-price">₹10,000</span>
+      <span class="new-price">₹7,999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('Ethical Hacking')">Enroll Now</button>
+  <button onclick="accessCourse('Ethical Hacking')">Start Course</button>
+</div>
+
+<div class="card course">
+   <span class="badge">PAID</span>
+  <img src="img/video.jpg">
+  <h3>Video Editing</h3>
+  <p>Learn video editing using Premiere Pro, CapCut & other tools.</p>
+     <p class="price">
+      <span class="old-price">₹8000</span>
+      <span class="new-price">₹5000</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('Video Editing')">Enroll Now</button>
+  <button onclick="accessCourse('Video Editing')">Start Course</button>
+</div>
+<div class="card course">
+  <span class="badge">POPULAR</span>
+  <img src="img/photoshop.jpg">
+  <h3>Photo Editing</h3>
+  <p>Learn Photoshop, Canva.</p>
+     <p class="price">
+      <span class="old-price">₹7000</span>
+      <span class="new-price">₹4999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('Photo Editing')">Enroll Now</button>
+  <button onclick="accessCourse('Photo Editing')">Start Course</button>
+</div>  
+
+<div class="card course">
+  <span class="badge">POPULAR</span>
+  <img src="img/excel.jpg">
+  <h3>Microsoft Excel</h3>
+     <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2500</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <p>Learn Excel.</p>
+  <button onclick="openCourse('Microsoft Excel')">Enroll Now</button>
+  <button onclick="accessCourse('Photo Editing')">Start Course</button>
+</div>  
+
+
+<div class="card course">
+  <span class="badge">POPULAR</span>
+  <img src="img/word.jpg">
+  <h3>Microsoft Word</h3>
+     <p class="price">
+      <span class="old-price">₹4000</span>
+      <span class="new-price">₹2500</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <p>Learn Word</p>
+  <button onclick="openCourse('Microsoft Word ')">Enroll Now</button>
+  <button onclick="accessCourse('Photo Editing')">Start Course</button>
+</div>  
+
+  <div class="card course">
+  <span class="badge">POPULAR</span>
+  <img src="img/internet.jpg">
+  <h3>Internet </h3>
+  <p>Learn Word</p>
+     <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('Internet')">Enroll Now</button>
+  <button onclick="accessCourse('Photo Editing')">Start Course</button>
+</div>  
+
+<div class="card course">
+  <span class="badge">POPULAR</span>
+  <img src="img/grafics.jpg">
+  <h3>Grafics Disgin</h3>
+  <p>Learn Word</p>
+     <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹4999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('Grafics Disgin')">Enroll Now</button>
+  <button onclick="accessCourse('Photo Editing')">Start Course</button>
+</div>  
+
+<div class="card course">
+  <span class="badge">POPULAR</span>
+  <img src="img/iot.jpg">
+  <h3>IOT (Internet Of Thinks)</h3>
+  <p>Learn Word</p>
+     <p class="price">
+      <span class="old-price">₹5000</span>
+      <span class="new-price">₹2999</span>
+      <span class="discount">40% OFF</span>
+      </p>
+  <button onclick="openCourse('IOT')">Enroll Now</button>
+  <button onclick="accessCourse('Photo Editing')">Start Course</button>
+</div>  
+
+
+  </div>
+</section>
+
+
+
+
+<!-- STUDENT REVIEWS -->
+<section id="reviews">
+  <h1>Student Reviews</h1>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="img/student1.jpg" alt="">
+      <h3>Rahul Kumar</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>
+        Ujala Computer Institute me training bahut achi mili.
+        Teachers practical knowledge dete hain.
+      </p>
+    </div>
+
+
+   <div class="card">
+      <img src="img/student1.jpg" alt="">
+      <h3>Rahul Kumar</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>
+        Ujala Computer Institute me training bahut achi mili.
+        Teachers practical knowledge dete hain.
+      </p>
+    </div>
+
+    
+
+
+
+    <div class="card">
+      <img src="img/student2.jpg" alt="">
+      <h3>Priya Sharma</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>
+        Web Development course complete karne ke baad
+        mujhe freelance projects milne lage.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="img/student3.jpg" alt="">
+      <h3>Aman Verma</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <p>
+        Best computer institute for beginners and advanced students.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h1>Gallery</h1>
+
+  <div class="gallery">
+    <img src="img/tecnology.jpg">
+    <img src="img\tecnoloy2.jpg">
+    <img src="img\tecnoloy3.jpg">
+    <img src="img/iot.jpg">
+  </div>
+</section>
+
+
+<!-- Video Section (Gallery ke niche) -->
+<section class="video-section">
+  <h2>Our Computer Lab</h2><br><br>
+
+
+ <div class="video-box">
+    <video controls>
+      <source src="video/ class (3).mp4" type="video/mp4">
+    </video>
+  </div>
+
+</section>
+
+
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+
+  <input type="text" placeholder="Your Name"><br>
+  <input type="email" placeholder="Your Email"><br>
+  <textarea placeholder="Message"></textarea><br>
+  <button>Send</button>
+
+  <p>📞 9756054921</p>
+</section>
+
+<section id="registration">
+  <h2>Course Registration</h2>
+
+  <form id="regForm">
+<div class="form-row">
+    <input type="text" id="name" placeholder="Full Name" required>
+
+    <input type="text" id="father" placeholder="Father Name" required>
+</div>
+
+    <input type="email" id="email" placeholder="Email" required>
+
+    <input type="tel" id="phone" placeholder="Mobile Number" required>
+<label>Gender:</label>
+
+<div class="gender-group">
+  <label><input type="radio" name="gender" value="Male" required> Male</label>
+  <label><input type="radio" name="gender" value="Female"> Female</label>
+  <label><input type="radio" name="gender" value="Other"> Other</label>
+</div>
+
+    <input type="text" id="address" placeholder="Address" required>
+
+    <select id="course" required>
+      <option value="">Select Course</option>
+      <option>Basic Computer</option>
+      <option>Tally</option>
+      <option>Web Development</option>
+      <option>Digital Marketing</option>
+      <option>Python</option>
+      <option>PHP</option>
+      <option>Microsoft Excel</option>
+      <option>Internet </option>
+      <option>Microsoft Word</option>
+      <option>IOT (Internet Of Thinks)</option>
+    </select>
+
+    <select id="timing" required>
+      <option value="">Select Batch Timing</option>
+      <option>Morning (8 AM - 10 AM)</option>
+      <option>Afternoon (12 PM - 2 PM)</option>
+      <option>Evening (4 PM - 6 PM)</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <button type="submit">Register Now</button>
+
+  </form>
+
+  <p id="successMsg" style="color:green; display:none;">
+    ✅ Registration Successful!
+  </p>
+</section>
+
+<!-- Google Map center location-->
+<section id="map">
+  <h2>Our Location</h2>
+
+  <iframe 
+    src="https://www.google.com/maps?q=911, kopa kripali RD UttrakhndGularbhoj&output=embed"
+    width="100%" 
+    height="600" 
+    style="border:0; border-radius:10px;" 
+    loading="lazy">
+  </iframe>
+</section>
+
+
+<!-- REPLACE OLD DEVELOPER SECTION -->
+<section id="developer">
+  <h1>Our Developer</h1>
+
+  <div class="slider-wrapper">
+
+    <!-- LEFT BUTTON -->
+    <button class="slide-btn left-btn" onclick="slideLeft()">❮</button>
+
+    
+    <!-- SLIDER -->
+    <div class="dev-container" id="devSlider">
+
+      <div class="dev-card active">
+        <img src="img/tecnoloy2.jpg">
+        <h3>Aman Singh</h3>
+        <p>Full Stack Developer</p>
+         <div class="dev-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+        <a href="#"><i class="fab fa-instagram"></i></a>
+
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+        <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+      </div>
+
+      <div class="dev-card">                                    
+        <img src="img/tecnology.jpg">
+        <h3>Rahul Kumar</h3>
+        <p>Frontend Developer</p>
+         <div class="dev-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+      <a href="#"><i class="fab fa-instagram"></i></a>
+
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+      <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+      </div>
+
+      <div class="dev-card">
+        <img src="img/tecnoloy3.jpg">
+        <h3>Rohit Sharma</h3>
+        <p>Backend Developer</p>
+         <div class="dev-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+      <a href="#"><i class="fab fa-instagram"></i></a>
+
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+      <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+      </div>
+
+      <div class="dev-card">
+        <img src="img/tecnology.jpg">
+        <h3>Vikas Kumar</h3>
+        <p>UI/UX Designer</p>
+         <div class="dev-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+    <a href="#"><i class="fab fa-instagram"></i></a>
+
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+      </div>
+
+
+       <div class="dev-card">
+        <img src="img/tecnology.jpg">
+        <h3>Vikas Kumar</h3>
+        <p>UI/UX Designer</p>
+         <div class="dev-social">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+    <a href="#"><i class="fab fa-instagram"></i></a>
+
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT BUTTON -->
+    <button class="slide-btn right-btn" onclick="slideRight()">❯</button>
+
+  </div>
+
+  <!-- DOTS -->
+  <div class="dots">
+    <span class="dot active-dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+</section>
+
+<!-- SOFTWARE COMPANY SUPPORT -->
+<section id="support-company" style="
+padding:60px 20px;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+text-align:center;
+color:white;
+">
+
+<h1 style="margin-bottom:15px; font-size:38px;">
+  🚀 Supported By Software Companies
+</h1>
+
+<p style="margin-bottom:40px; color:#cbd5e1;">
+  Trusted technologies & software platforms we work with
+</p>
+
+<div style="
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+">
+
+  <!-- CARD -->
+  <div style="
+  width:220px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+  " onmouseover="this.style.transform='translateY(-10px)'"
+     onmouseout="this.style.transform='translateY(0px)'">
+
+    <i class="fab fa-google" style="font-size:55px; color:#4285F4;"></i>
+    <h3 style="margin-top:15px;">Google</h3>
+    <p style="font-size:14px; color:#ddd;">
+      Cloud, Search & AI Technology
+    </p>
+
+  </div>
+
+  <!-- CARD -->
+  <div style="
+  width:220px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+  " onmouseover="this.style.transform='translateY(-10px)'"
+     onmouseout="this.style.transform='translateY(0px)'">
+
+    <i class="fab fa-microsoft" style="font-size:55px; color:#00A4EF;"></i>
+    <h3 style="margin-top:15px;">Microsoft</h3>
+    <p style="font-size:14px; color:#ddd;">
+      Office & Development Tools
+    </p>
+
+  </div>
+
+  <!-- CARD -->
+  <div style="
+  width:220px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+  " onmouseover="this.style.transform='translateY(-10px)'"
+     onmouseout="this.style.transform='translateY(0px)'">
+
+    <i class="fab fa-amazon" style="font-size:55px; color:#ff9900;"></i>
+    <h3 style="margin-top:15px;">Amazon AWS</h3>
+    <p style="font-size:14px; color:#ddd;">
+      Cloud Hosting & Servers
+    </p>
+
+  </div>
+
+  <!-- CARD -->
+  <div style="
+  width:220px;
+  padding:25px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  transition:0.4s;
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
+  " onmouseover="this.style.transform='translateY(-10px)'"
+     onmouseout="this.style.transform='translateY(0px)'">
+
+    <i class="fab fa-github" style="font-size:55px; color:white;"></i>
+    <h3 style="margin-top:15px;">GitHub</h3>
+    <p style="font-size:14px; color:#ddd;">
+      Code Management Platform
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 AMAN Computer Center | All Rights Reserved</p>
+
+  <div class="social-icons">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+
+  <!-- NEW LINKS -->
+  <div style="margin-top:15px;">
+    <a href="privacy.html" style="color:white; margin:0 10px;">
+      Privacy Policy
+    </a>
+
+    <a href="terms.html" style="color:white; margin:0 10px;">
+      Terms & Conditions
+    </a>
+  </div>
+
+
+
+</footer>
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/9756054921" target="_blank">💬</a>
+
+<!-- add java scrip file  -->
+
+<script src="script.js"></script>
+
+
+
+<!---Razorpay------>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+
+<script>
+
+const slider = document.getElementById("devSlider");
+const cards = document.querySelectorAll(".dev-card");
+const dots = document.querySelectorAll(".dot");
+
+let index = 0;
+let autoSlide;
+
+/* UPDATE ACTIVE CARD */
+function updateSlider(){
+
+  cards.forEach(card => card.classList.remove("active"));
+  dots.forEach(dot => dot.classList.remove("active-dot"));
+
+  cards[index].classList.add("active");
+  dots[index].classList.add("active-dot");
+
+  slider.scrollTo({
+    left: cards[index].offsetLeft - 30,
+    behavior:"smooth"
+  });
+}
+
+/* RIGHT */
+function slideRight(){
+
+  index++;
+
+  if(index >= cards.length){
+    index = 0;
+  }
+
+  updateSlider();
+}
+
+/* LEFT */
+function slideLeft(){
+
+  index--;
+
+  if(index < 0){
+    index = cards.length - 1;
+  }
+
+  updateSlider();
+}
+
+/* AUTO SLIDE */
+function startAutoSlide(){
+
+  autoSlide = setInterval(() => {
+    slideRight();
+  }, 2500);
+
+}
+
+/* PAUSE ON HOVER */
+slider.addEventListener("mouseenter", () => {
+  clearInterval(autoSlide);
+});
+
+slider.addEventListener("mouseleave", () => {
+  startAutoSlide();
+});
+
+
+
+
+
+/* START */
+startAutoSlide();
+
+
+
+
+function login(){
+  document.getElementById("loginPopup").style.display = "flex";
+}
+
+function closeLogin(){
+  document.getElementById("loginPopup").style.display = "none";
+}
+
+function togglePassword(){
+
+  let pass = document.getElementById("password");
+
+  if(pass.type === "password"){
+    pass.type = "text";
+  } else {
+    pass.type = "password";
+  }
+
+}
+
+
+</script>
+
+
+
+<!-- PREMIUM LOGIN POPUP -->
+
+
+
+<div class="premium-login" id="loginPopup">
+
+  <div class="premium-box">
+
+    <!-- CLOSE -->
+    <span class="premium-close" onclick="closeLogin()">
+      <i class="fa fa-times"></i>
+    </span>
+
+    <!-- LEFT SIDE -->
+    <div class="login-left">
+
+      <h1>Welcome Back 👋</h1>
+
+      <p>
+        Login to access your courses and dashboard.
+      </p>
+
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="login-right">
+
+      <h2>Login</h2>
+
+      
+<form action="login.php" method="POST">
+
+  <div class="premium-input">
+    <i class="fa fa-user"></i>
+    <input type="text" name="username" placeholder="Username" required>
+  </div>
+
+  <div class="premium-input">
+    <i class="fa fa-envelope"></i>
+    <input type="email" name="email" placeholder="Email" required>
+  </div>
+
+  <div class="premium-input">
+    <i class="fa fa-lock"></i>
+    <input type="password" name="password" id="password" placeholder="Password" required>
+
+    <i class="fa fa-eye eye-btn" onclick="togglePassword()"></i>
+  </div>
+
+  <button type="submit" class="premium-login-btn">
+    Login Now
+  </button>
+
+</form>
+
+      <div class="social-login">
+
+        <button>
+          <i class="fab fa-google"></i>
+        </button>
+
+        <button>
+          <i class="fab fa-facebook-f"></i>
+        </button>
+
+        <button>
+          <i class="fab fa-github"></i>
+        </button>
+
+      </div>
+
+      <p class="register-text">
+        Don't have account?
+        <a href="#">Create Account</a>
+      </p>
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
